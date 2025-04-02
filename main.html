@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Airline Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #003366;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background-color: #00509e;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #004080;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #e6f2ff;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .airlines-list {
+            padding: 20px;
+        }
+        .airlines-list h2 {
+            text-align: center;
+            color: #003366;
+        }
+        .airlines-list .airline-info {
+            background-color: #ffffff;
+            border: 1px solid #cce0ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+        }
+        .slider::-webkit-scrollbar {
+            height: 8px;
+        }
+        .slider::-webkit-scrollbar-thumb {
+            background: #003366;
+            border-radius: 5px;
+        }
+        .slider .slide {
+            flex: 0 0 auto;
+            min-width: 250px;
+            background-color: #ffffff;
+            border: 1px solid #cce0ff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #003366;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dark Airline Info</h1>
+</header>
+
+<nav>
+    <a href="MainPage.html">Domů</a>
+</nav>
+
+<div class="hero">
+    <h1>Vítejte na informacích o aerolinkách</h1>
+    <p>Podívejte se na podrobnosti o různých aerolinkách!</p>
+</div>
+
+<main>
+    <section class="airlines-list">
+        <h2>Informace o aerolinkách</h2>
+        <div class="airline-info">
+            <h3>Emirates</h3>
+            <p>Destinace: přes 150! | Známé díky své kvalitě a počtu letadel.</p>
+        </div>
+        <div class="airline-info">
+            <h3>Qatar Airways</h3>
+            <p>Destinace: přes 140! | Vítěz několika cen</p>
+        </div>
+        <div class="airline-info">
+            <h3>Lufthansa</h3>
+            <p>Destinace: Přes 200 po celém světě | Europe's largest airline group.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 style="text-align: center;">Proklouzněte k informacím</h2>
+        <div class="slider">
+            <div class="slide">
+                <h3>Emirates</h3>
+                <p>Luxusní zážitek z cestování.</p>
+            </div>
+            <div class="slide">
+                <h3>Qatar Airways</h3>
+                <p>Několikanásobně oceněné služby.</p>
+            </div>
+            <div class="slide">
+                <h3>Lufthansa</h3>
+                <p>Evropský gigant v letectví.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Dark Airline Info</p>
+</footer>
+
+</body>
+</html>
