@@ -171,4 +171,51 @@
   .airline-card {
     animation: fadeIn 1s ease-out;
   }
+  .topnav {
+    background: #232946;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 2rem;
+    height: 60px;
+  }
+  .topnav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 2rem;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .topnav a:hover {
+    color: #eebbc3;
+  }
+  .topnav input[type="text"] {
+    margin-left: auto;
+    padding: 8px 16px;
+    border-radius: 24px;
+    border: none;
+    font-size: 1em;
+    background: #f4f4f4;
+    color: #232946;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    width: 220px;
+  }
+  #searchResults {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    font-size: 0.8em;
+    list-style: none;
+    padding: 0.5em 1em;
+    z-index: 100;
+  }
+  #searchResults li {
+    margin: 0.3em 0;
+  }
+  
+  
   
