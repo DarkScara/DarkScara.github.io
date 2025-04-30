@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav>
+    <ul class="navbar">
+     <a href="index.html">Domů</a>
+      <a href="airfrance.html">Air France</a>
+      <a href="emirates.html">Emirates</a>
+      <a href="lufthansa.html">Lufthansa</a>
+      <a href="qatar.html">Qatar</a>
+      <a href="ryanair.html">Ryanair</a>
+      <a href="letadla.html">Letadla</a>
+    </ul>
+  </nav>
 
   <header>
     <h1>Přehled Aerolinek</h1>
@@ -52,3 +63,33 @@
 
 </body>
 </html>
+
+<input type="text" id="searchInput" placeholder="Hledat...">
+<ul id="searchResults"></ul>
+
+<script>
+const pages = [
+  { name: "Air France", url: "airfrance.html" },
+  { name: "Emirates", url: "emirates.html" },
+  { name: "Lufthansa", url: "lufthansa.html" },
+  { name: "Qatar", url: "qatar.html" },
+  { name: "Ryanair", url: "ryanair.html" },
+  { name: "Letadla", url: "letadla.html" },
+  { name: "Boeing 737", url: "Boeing737.html" }
+];
+
+document.getElementById('searchInput').addEventListener('input', function() {
+  const query = this.value.toLowerCase();
+  const results = pages.filter(p => p.name.toLowerCase().includes(query));
+  const resultsList = document.getElementById('searchResults');
+  resultsList.innerHTML = '';
+  results.forEach(r => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = r.url;
+    a.textContent = r.name;
+    li.appendChild(a);
+    resultsList.appendChild(li);
+  });
+});
+</script>
