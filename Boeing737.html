@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Boeing 737</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
   <!-- Navigace s vyhledáváním -->
@@ -18,6 +19,7 @@
     
     <input type="text" id="searchInput" placeholder="Hledat...">
     <ul id="searchResults"></ul>
+    <button id="toggle-theme">Přepnout režim</button>
   </div>
   
   <main class="aircraft-detail">
@@ -38,5 +40,10 @@
     </section>
     <!-- Můžete přidat další sekce s technickými údaji, zajímavostmi atd. -->
   </main>
+  <script>
+    ScrollReveal().reveal('main h1', { origin: 'top', distance: '50px', duration: 1000 });
+    ScrollReveal().reveal('.info-block', { origin: 'left', distance: '50px', duration: 1000 });
+    ScrollReveal().reveal('.description-block', { origin: 'right', distance: '50px', duration: 1000 });
+  </script>
 </body>
 </html>
