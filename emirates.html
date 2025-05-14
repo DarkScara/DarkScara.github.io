@@ -5,9 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emirates Airlines - Detail</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-
+  <nav>
+    <ul class="navbar">
+     <a href="index.html">Domů</a>
+      <a href="airfrance.html">Air France</a>
+      <a href="emirates.html">Emirates</a>
+      <a href="lufthansa.html">Lufthansa</a>
+      <a href="qatar.html">Qatar</a>
+      <a href="ryanair.html">Ryanair</a>
+      <a href="letadla.html">Letadla</a>
+    </ul>
+    <button id="toggle-theme">Přepnout režim</button>
+  </nav>
   <header>
     <h1>Emirates Airlines</h1>
     <a href="index.html">Zpět na přehled aerolinek</a>
@@ -26,5 +38,27 @@
     </section>
   </main>
 
+  <script>
+    // Ensure ScrollReveal is initialized correctly
+    ScrollReveal().reveal('header', { origin: 'top', distance: '50px', duration: 1000 });
+    ScrollReveal().reveal('.airline-details', { origin: 'bottom', distance: '50px', duration: 1000 });
+
+    // Ensure theme toggle works
+    const toggleThemeButton = document.getElementById('toggle-theme');
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+
+    toggleThemeButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
 </body>
 </html>
