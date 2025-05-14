@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <title>Typy letadel</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-  <!-- Navigace zde -->
   <nav>
     <ul class="navbar">
       <li><a href="index.html">Domů</a></li>
@@ -17,6 +17,7 @@
       <li><a href="ryanair.html">Ryanair</a></li>
       <li><a href="letadla.html">Letadla</a></li>
     </ul>
+    <button id="toggle-theme">Přepnout režim</button>
   </nav>
   <h1>Typy letadel</h1>
   <ul>
@@ -30,5 +31,27 @@
     <li>Airbus A350</li>
     <li>Airbus A380</li>
   </ul>
+  <section class="plane-models">
+    <h2>Modely letadel</h2>
+    <div class="plane-card">
+      <h3>Boeing 737</h3>
+      <p>Kapacita: 85–215 cestujících</p>
+      <p>Dolet: až 6 570 km</p>
+    </div>
+    <div class="plane-card">
+      <h3>Airbus A320</h3>
+      <p>Kapacita: 140–240 cestujících</p>
+      <p>Dolet: až 6 300 km</p>
+    </div>
+    <div class="plane-card">
+      <h3>Boeing 787 Dreamliner</h3>
+      <p>Kapacita: 242–335 cestujících</p>
+      <p>Dolet: až 15 200 km</p>
+    </div>
+  </section>
+  <script>
+    ScrollReveal().reveal('h1', { origin: 'top', distance: '50px', duration: 1000 });
+    ScrollReveal().reveal('ul', { origin: 'bottom', distance: '50px', duration: 1000 });
+  </script>
 </body>
 </html>
