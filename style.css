@@ -7,11 +7,14 @@
   
   body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #2d2d2d, #111);
+    font-size: 1rem;
+    font-weight: 400;
     color: #fff;
     line-height: 1.6;
     padding: 0;
     overflow-x: hidden;
+    background-color: #ffffff; /* Set background to white */
+    color: #232946; /* Ensure text is visible */
   }
   
   header {
@@ -217,5 +220,60 @@
     margin: 0.3em 0;
   }
   
+  button, a {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  button:hover, a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
   
   
+  body.dark-mode a {
+    color: #bb86fc;
+  }
+  
+/* Light mode styles */
+body {
+  background-color: #f4f4f4;
+  color: #232946; /* Ensure text is visible in light mode */
+}
+
+.navbar a {
+  color: #232946; /* Light mode link color */
+  text-decoration: none;
+}
+
+button {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body {
+  background-color: #ffffff; /* Set background to white */
+  color: #232946; /* Ensure text is visible */
+}
+
+.navbar a {
+  color: #232946; /* Adjust link color for white background */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff; /* Ensure text is visible in dark mode */
+}
+
+body.dark-mode .navbar a {
+  color: #bb86fc; /* Dark mode link color */
+}
+
+body.dark-mode button {
+  background-color: #bb86fc;
+  color: #121212;
+}
